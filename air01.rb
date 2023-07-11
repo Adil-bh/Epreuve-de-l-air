@@ -5,14 +5,12 @@ end
 
 def split_method(string_to_cut, separator_string)
 	actual_word = []
-	string_to_cut_array = []
-	first_part_array = []
-	last_part_array = []
+	array_of_words = []
 
-	#On transforme le String en Array => string_to_cut_array
+	#On transforme le string_to_cut en Array => array_of_words
 	for i in 0..string_to_cut.length
 		if string_to_cut[i] == "\s" || i == string_to_cut.length
-			string_to_cut_array << actual_word.join
+			array_of_words << actual_word.join
 			actual_word.clear
 		else
 			actual_word << string_to_cut[i]
@@ -20,9 +18,12 @@ def split_method(string_to_cut, separator_string)
 	end
 
 	#On remplace le séparateur par un retour à la ligne
-	string_to_cut_array.map! { |mot| mot == "la" ? "\n" : mot }
+	array_of_words.map! { |mot| mot == "la" ? "\n" : mot }
 
-	return string_to_cut_array.join(" ")
+	#Remise du tableau sous forme de string
+	array_of_words = array_of_words.join(" ")
+
+	return array_of_words
 end
 
 #Partie 1 : Gestion d'erreur
