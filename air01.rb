@@ -18,7 +18,7 @@ def split_method(string_to_cut, separator_string)
 	end
 
 	#On remplace le séparateur par un retour à la ligne
-	array_of_words.map! { |mot| mot == separator_string ? "\n" : mot }
+	array_of_words.map! { |word| word == separator_string ? "\n" : word }
 
 	#Remise du tableau sous forme de string
 	array_of_words = array_of_words.join(" ")
