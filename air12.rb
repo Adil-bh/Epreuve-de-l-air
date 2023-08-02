@@ -18,9 +18,9 @@ def my_partition(array, pivot)
 	return left_array, right_array
 end
 
-def my_quick_sort(array) #Utilisation de la fonction récursive
+def my_quick_sort(array) #Utilisation d'une fonction récursive
 	array.map!(&:to_i)
-	pivot = array.sample
+	pivot = array.sampleit 
 	return array if array.length <= 1
 	left, right = my_partition(array, pivot)
 	my_quick_sort(left) + my_quick_sort(right)
