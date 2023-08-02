@@ -19,8 +19,7 @@ def my_partition(array, pivot)
 end
 
 def my_quick_sort(array) #Utilisation d'une fonction récursive
-	array.map!(&:to_i)
-	pivot = array.sampleit 
+	pivot = array.sample
 	return array if array.length <= 1
 	left, right = my_partition(array, pivot)
 	my_quick_sort(left) + my_quick_sort(right)
@@ -28,6 +27,9 @@ end
 
 #Partie 1 : Gestion d'erreur
 check_errors(ARGV)
+
+#Partie 2 : Parsing
+ARGV.map!(&:to_i) #Tableau strings => Tableau d'entiers
 
 #Partie 3 : Résolution
 result = my_quick_sort(ARGV)
