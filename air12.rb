@@ -1,3 +1,5 @@
+#Question : A quel moment utiliser une fonction récursive ?
+
 #Fonction utilisées
 def check_errors(arguments)
 	if arguments.any? { |element| element.match(/[a-zA-Z]/) }
