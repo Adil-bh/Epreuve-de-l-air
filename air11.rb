@@ -9,13 +9,11 @@ def pyramid_of_char(letter, number_of_lines)
 	end
 end
 
-
-#Partie 1 : Gestion d'erreur
 #Partie 2 : Parsing
 letter = ARGV[0]
 lines = ARGV[1]
 
-
+#Gestion d'erreur
 if letter.length != 1 || lines.to_s.length != 1
 	puts "error"
 	exit
