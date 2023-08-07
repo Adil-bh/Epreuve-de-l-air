@@ -9,7 +9,7 @@ end
 
 def check_errors(arguments)
     if arguments.length <= 1
-        puts "error : need more arguments"
+        puts "error"
         exit
     end
 end
