@@ -37,4 +37,4 @@ my_script_launch("air10.rb", ["'a.txt'", "Bonjour"])
 my_script_launch("air11.rb", ["O 5", "Bonjour"])
 my_script_launch("air12.rb", ["6 5 4 3 2 1", "Bonjour", "11 22 41 54"])
 
-puts "\nTotal success: (#{$total_successes}/#{$total_attempts})".colorize(:yellow	)
+puts "\nTotal success: (#{$total_successes}/#{$total_attempts})".colorize(:yellow)
