@@ -29,7 +29,7 @@ end
 
 def check_errors(arguments)
 	if !arguments.any? { |element| element.match("fusion")  }
-		puts "error : fusion word needed"
+		puts "error"
 		exit
 	end
 end
