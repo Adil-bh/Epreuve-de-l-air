@@ -21,7 +21,7 @@ def check_errors(arguments, number_to_add)
   	end
 
   	if !number_to_add.match(/[0-9]/)
-  		puts "error : last argument needs to be numeric"
+  		puts "error"
   		exit
   	end
 end
