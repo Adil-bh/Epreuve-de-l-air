@@ -16,6 +16,11 @@ def check_errors(arguments)
 		puts "error"
 		exit
 	end
+
+	if ARGV.last.length != 1
+		puts "error"
+		exit
+	end
 end
 #Partie 1 : Gestion d'erreur
 check_errors(ARGV)
