@@ -1,19 +1,28 @@
 require 'colorize'
 #Fonction utilisées
+
+#On utilise des variables globales pour calculer le nombre de succès par tentatives
+$total_attempts = 0
+$total_successes = 0
 def my_script_launch(filename, arguments)
 	total_attempts = arguments.length
 	output = ""
-
 	puts "<<<< #{filename} : Test >>>>".colorize(:black ).colorize( :background => :white)
-
 	for i in 0..arguments.length - 1
 		attempt = i + 1 #Uniquement pour afficher dans la console les tentatives à partir de 1
 		output = `ruby #{filename} #{arguments[i]}`
-		print output.chomp.downcase.include?("error") ? "#{filename} (#{attempt}/#{total_attempts}) : failure\n".red : "#{filename} (#{attempt}/#{total_attempts}) : success\n".green
+		if output.chomp.downcase.include?("error") 
+			print"#{filename} (#{attempt}/#{total_attempts}) : failure\n".red
+			$total_attempts += 1
+		else
+			print "#{filename} (#{attempt}/#{total_attempts}) : success\n".green
+			$total_attempts += 1
+			$total_successes += 1
+		end
 	end
 end
 
-#Partie 3 : Résolution
+#Résolution et Affichage
 my_script_launch("air00.rb", ["'Bonjour les gars'", "'Salut les filles'", "Ciao", "Plusieurs args"])
 my_script_launch("air01.rb", ["'Crevette magique dans la mer des étoiles' 'la'", "Test erreur"])
 my_script_launch("air02.rb", ["'je' 'teste' 'des' 'trucs' ' '", "Test erreur"])
@@ -28,5 +37,4 @@ my_script_launch("air10.rb", ["'a.txt'", "Bonjour"])
 my_script_launch("air11.rb", ["O 5", "Bonjour"])
 my_script_launch("air12.rb", ["6 5 4 3 2 1", "Bonjour", "11 22 41 54"])
 
-
-# Partie 4 : Affichage
+puts "\nTotal success: (#{$total_successes}/#{$total_attempts})".colorize(:yellow	)
