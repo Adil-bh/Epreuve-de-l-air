@@ -28,10 +28,8 @@ if check_errors_arguments(ARGV)
 	exit
 end
 
-#Partie 2 : Parsing
-
-#Partie 3 : Résolution
+#Partie 2 : Résolution
 result = find_intruder(ARGV)
 
-#Partie 4 : Affichage
+#Partie 3 : Affichage
 puts result
