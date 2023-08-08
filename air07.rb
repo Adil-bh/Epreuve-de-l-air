@@ -26,11 +26,11 @@ def check_errors(arguments, number_to_add)
   	end
 end
 
-#Partie 1 : Gestion d'erreur
-#Partie 2 : Parsing
+#Partie 1-2 : Parsing et Gestion d'erreur
 number_to_add = ARGV.last
 ARGV.pop
 check_errors(ARGV, number_to_add)
+
 #Partie 3 : Résolution
 result = sorted_insert(ARGV, number_to_add)
 
