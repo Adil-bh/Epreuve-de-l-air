@@ -16,9 +16,9 @@ end
 
 #Partie 1 : Gestion d'erreur
 check_errors(ARGV)
-#Partie 2 : Parsing
 
-#Partie 3 : Résolution
+#Partie 2 : Résolution
 result = my_rotation(ARGV)
-#Partie 4 : Affichage
+
+#Partie 3 : Affichage
 print result
