@@ -8,7 +8,7 @@ def remove_duplicate_char(array)
 	output_array = []
 
 	for i in 0..n
-		#Si le caractère du tableau en entrée est différent de la dernière valeur du tableau en sortie : on ne l'intègre pas
+		#Si le caractère du tableau parcouru est différent de la dernière valeur du tableau output : on l'intègre
 		if array[i] != output_array.last
 			output_array << array[i]
 		end
