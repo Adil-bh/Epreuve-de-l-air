@@ -39,7 +39,7 @@ check_errors(ARGV)
 
 #Partie 2 : Parsing
 array1, array2 = split_array(ARGV)
-if array1.length != array2.length
+if array1.length != array2.length #Tableaux doivent être de la même taille ?
 	puts "error"
 	exit
 end
