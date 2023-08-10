@@ -6,7 +6,7 @@ def sorted_fusion(array1, array2)
 	for i in 0..n
 		if array1[i] > array2[i]
 			output_array << array2[i] << array1[i]
-		elsif array1[i] < array2[i]
+		else
 			output_array << array1[i] << array2[i]
 		end
 	end
