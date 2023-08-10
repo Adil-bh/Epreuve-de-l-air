@@ -22,12 +22,10 @@ def substract_or_add_to_array(array, operator_sign, operator_number)
 	operator_number = operator_number.to_i
 	n = array.length
 
-	if operator_sign == "+"
-		for i in 0..n-1
+	for i in 0..n-1
+		if operator_sign == "+"
 			array[i] = array[i] + operator_number
-		end
-	elsif operator_sign == "-"
-		for i in 0..n-1
+		elsif operator_sign == "-"
 			array[i] = array[i] - operator_number
 		end
 	end
